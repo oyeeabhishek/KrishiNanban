@@ -9,9 +9,7 @@ import pickle
 
 # Loading crop recommendation model
 
-crop_recommendation_model_path = 'KrishiNanban/RF_Model_pkl'
-crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
-
+crop_recommendation_model = pickle.load(open('RF_Model_pkl', 'rb'))
 
 
 

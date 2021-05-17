@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results</title>
+  </head>
+
+
+
+
+
+
+<body>
+
+  <style>
+
+    html body {
+      background-color: #f08a5d;    
+    }
+
+    h1{
+      text-align: center; 
+      margin: 0%;
+      font-size: 50px;
+      color: #6a2c70; 
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-group{
+      font-family: 'Montserrat', sans-serif;
+      padding-top: 10%;
+    }
+
+    input{
+      border: none;
+      display: block;
+      border-radius: 5px;
+      background-color: #fce38a;
+      background-image: url('searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 4% 5%;
+      margin-top: 5%;
+      transition: width 0.4s ease-in-out;
+    }
+
+    input:focus{
+      width: 100%;
+     border-color: #b83b5e;
+    }
+
+    .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #b83b5e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5%;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@-o-viewport{
+  zoom: 1;
+  width: max-content;
+}
+
+@-ms-viewport{
+  width: max-content;
+  zoom: 1;
+}
+
+    
+
+
+  
+</style>
+
+
+</style>
+
+
+<div class="container py-2 mx-auto my-50 h-10 " style="margin: 12rem;">
+  <div class="row">
+      <div class="col-sm py-2 py-md-3">
+          <div class="card card-body" style="justify-content: center;">
+               <h1 class="text-center"><b>You should grow <i>{{ prediction }} </i>in your farm</b></h1>
+          </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>

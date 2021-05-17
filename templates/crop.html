@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crop Recommendation</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+<style>
+
+    html body {
+      background-color: #f08a5d;    
+    }
+
+    h2{
+      text-align: center; 
+      margin: 0%;
+      font-size: 50px;
+      color: #6a2c70; 
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-group{
+      font-family: 'Montserrat', sans-serif;
+      padding-top: 10%;
+    }
+
+    input{
+      border: none;
+      display: block;
+      border-radius: 5px;
+      background-color: #fce38a;
+      background-image: url('searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 4% 5%;
+      margin-top: 5%;
+      transition: width 0.4s ease-in-out;
+    }
+
+    input:focus{
+      width: 100%;
+     border-color: #b83b5e;
+    }
+
+    .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #b83b5e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5%;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@-o-viewport{
+  zoom: 1;
+  width: max-content;
+}
+
+@-ms-viewport{
+  width: max-content;
+  zoom: 1;
+}
+
+    
+
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2>
+  <b>Best Crop for You</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('crop_prediction') }}">
+    <div class="form-group">
+      <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Nitrogen"
+        name="nitrogen"
+        placeholder="Example 20"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Phosphorous" style="font-size: 17px"><b>Phosphorous</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Phosphorous"
+        name="phosphorous"
+        placeholder="Example 20"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Pottasium"
+        name="pottasium"
+        placeholder="Example 20"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="ph" style="font-size: 17px"><b>Temperature</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="temperature"
+        name="temperature"
+        placeholder="in Celcius"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+      <div class="form-group">
+      <label for="ph" style="font-size: 17px"><b>Humidity</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="humidity"
+        name="humidity"
+        placeholder="in %"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+      <div class="form-group">
+      <label for="ph" style="font-size: 17px"><b>ph Level</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="ph"
+        name="ph"
+        placeholder="of Soil"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Rainfall" style="font-size: 17px"><b>Rainfall</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Rainfall"
+        name="rainfall"
+        placeholder="in mm"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    
+    <br>
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="button"
+        style="vertical-align:middle"
+      >
+      <span>Predict </span>
+        
+      </button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
